@@ -27,13 +27,13 @@ const AddMovieForm = (props) => {
   const addMovieHandler = () => {
     const newMovie = { ...movie, id: Date.now() };
     dispatch(addMovie(newMovie));
-    console.log(newMovie);
     push("/movies");
   };
 
   const handleSubmit = (e) => {};
 
   const { title, director, genre, metascore, description } = movie;
+
   return (
     <div className="bg-white rounded-md shadow flex-1">
       <form onSubmit={addMovieHandler}>
