@@ -56,13 +56,13 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 &nbsp;
 
 - **Film Ekleme Action'ı:**
-  - [ ] movieReducer.js'ye bir `ADD_MOVIE` case'i ekleyin.
-  - [ ] Bu yeni case'in, `payload` aracılığıyla iletilen film datasını `movies` listesine ekleyin.
-  - [ ] `movieActions.js`'de `addMovie` için bir action generator oluşturun.
-  - [ ] Bir filmin eklenmesini tetikleyen componenti bulun ve `addMovie` action'ını bağlayın.
-  - [ ] `addMovie`'yi çağırmak için gerekli event handlerı oluşturun ve bağlayın.
-  - [ ] Yeni bir film eklerken `id` değeri olarak `Date.now()` kullanın.
-  - [ ] Film eklendikten sonra filmler sayfasına yönlendirmek için `push('/movies/')` komutunu ekleyin.
+  - [x] movieReducer.js'ye bir `ADD_MOVIE` case'i ekleyin.
+  - [x] Bu yeni case'in, `payload` aracılığıyla iletilen film datasını `movies` listesine ekleyin.
+  - [x] `movieActions.js`'de `addMovie` için bir action generator oluşturun.
+  - [x] Bir filmin eklenmesini tetikleyen componenti bulun ve `addMovie` action'ını bağlayın.
+  - [x] `addMovie`'yi çağırmak için gerekli event handlerı oluşturun ve bağlayın.
+  - [x] Yeni bir film eklerken `id` değeri olarak `Date.now()` kullanın.
+  - [x] Film eklendikten sonra filmler sayfasına yönlendirmek için `push('/movies/')` komutunu ekleyin.
 
 #### Favoriler reducerı oluşturun
 
