@@ -35,13 +35,13 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 
 - [x] `movieReducer.js` içindeki `initialState` reducer'ın başlangıç değeri olarak atanmalıdır.
 
-- [ ] **MovieList bileşeni, tüm filmlerimizi ekrana yazdırır.**
+- [x] **MovieList bileşeni, tüm filmlerimizi ekrana yazdırır.**
       MovieList component'i içerisindeki `movies` datası redux store'dan çekilmelidir. `react-redux` içerisinden `useSelector` hookunu kullanarak `movies` değerine erişin.
 
-- [ ] **`AppHeader` component'i, başlık metnini görüntülemek için `appTitle` değişkenini kullanır.**  
+- [x] **`AppHeader` component'i, başlık metnini görüntülemek için `appTitle` değişkenini kullanır.**  
        `appTitle` değeri redux store'dan çekilmelidir.
 
-- [ ] Son olarak `Movie` componentindeki `movies` datası yine redux store içerisinden çekilmelidir.
+- [x] Son olarak `Movie` componentindeki `movies` datası yine redux store içerisinden çekilmelidir.
 
 #### Sil ve Film Ekle eylemlerini bağlama
 
