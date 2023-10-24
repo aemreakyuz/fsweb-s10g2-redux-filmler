@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+
 import { addMovie } from "../store/actions/movieActions.js";
 
 import { Link, useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const AddMovieForm = (props) => {
+  const dispatch = useDispatch();
   const { push } = useHistory();
 
   const [movie, setMovie] = useState({
@@ -21,12 +24,19 @@ const AddMovieForm = (props) => {
     });
   };
 
+  const addMovieHandler = () => {
+    const newMovie = { ...movie, id: Date.now() };
+    dispatch(addMovie(newMovie));
+    console.log(newMovie);
+    push("/movies");
+  };
+
   const handleSubmit = (e) => {};
 
   const { title, director, genre, metascore, description } = movie;
   return (
     <div className="bg-white rounded-md shadow flex-1">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={addMovieHandler}>
         <div className="p-5 pb-3 border-b border-zinc-200">
           <h4 className="text-xl font-bold">Add Movie</h4>
         </div>
