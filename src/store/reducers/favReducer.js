@@ -23,15 +23,23 @@ const favReducer = (state = initialState, action) => {
       if (checkExisting) {
         return state;
       } else {
+        const favList = [...state.favorites, action.payload];
+        localStorage.setItem("favList", JSON.stringify(favList));
+
         return {
           ...state,
           favorites: [...state.favorites, action.payload],
         };
       }
     case REMOVE_FAVORITE:
+      const removedItem = state.favorites.filter(
+        (item) => action.payload !== item.id
+      );
+
+      localStorage.setItem("favList", JSON.stringify(removedItem));
       return {
         ...state,
-        favorites: state.favorites.filter((item) => action.payload !== item.id),
+        favorites: removedItem,
       };
     default:
       return state;
